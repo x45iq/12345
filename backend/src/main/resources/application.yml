@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/${POSTGRES_DB}
+    username: postgres
+    password: ${POSTGRES_PASSWORD:db-wrz2z}
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/migration/V1__initial_schema.sql
+      continue-on-error: true
